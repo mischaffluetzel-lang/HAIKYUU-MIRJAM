@@ -198,3 +198,155 @@ img {
   object-fit: cover;
   display: block;
 }
+.characters {
+  background: #131212;
+  color: white;
+  padding: 40px 80px;
+}
+
+.characters h2 {
+  margin: 0 0 35px;
+  font-size: 75px;
+  font-weight: 900;
+  text-shadow: 6px 6px 0 #ff6b1a;
+}
+
+.characters input {
+  display: none;
+}
+
+.card {
+  display: none;
+  position: relative;
+  min-height: 600px;
+  background: #261812;
+  border: 3px solid white;
+  box-shadow: 18px 18px 0 #ff6b1a;
+  padding: 70px;
+  overflow: hidden;
+}
+
+.card::before {
+  content: "";
+  position: absolute;
+  left: 40px;
+  top: 170px;
+  width: 500px;
+  height: 340px;
+  background: #ff6b1a;
+  transform: skewX(-13deg);
+}
+
+.card img {
+  position: absolute;
+  left: 60px;
+  bottom: 20px;
+  width: 500px;
+  height: 540px;
+  object-fit: contain;
+  z-index: 2;
+}
+
+.info {
+  position: relative;
+  z-index: 2;
+  margin-left: 650px;
+  max-width: 650px;
+}
+
+.team {
+  margin: 0 0 15px;
+  color: #ffc21a;
+  font-size: 24px;
+  font-weight: 900;
+}
+
+.info h3 {
+  margin: 0;
+  color: #fff8ef;
+  font-size: 95px;
+  line-height: 0.88;
+  font-weight: 900;
+}
+
+.stats {
+  display: flex;
+  gap: 18px;
+  margin: 35px 0;
+}
+
+.stats div {
+  width: 140px;
+  border: 3px solid white;
+  padding: 14px 18px;
+}
+
+.stats span {
+  display: block;
+  font-size: 14px;
+  font-weight: 900;
+}
+
+.stats b {
+  color: #ff6b1a;
+  font-size: 40px;
+}
+
+.desc {
+  margin: 0;
+  color: #ddd;
+  font-size: 24px;
+  line-height: 1.45;
+  max-width: 620px;
+}
+
+.number {
+  position: absolute;
+  right: 50px;
+  top: 35px;
+  color: #ff6b1a;
+  font-size: 105px;
+  font-weight: 900;
+}
+
+.buttons {
+  display: flex;
+  gap: 16px;
+  margin-top: 45px;
+  flex-wrap: wrap;
+}
+
+.buttons label {
+  border: 3px solid white;
+  background: #171717;
+  color: white;
+  padding: 22px 45px;
+  font-size: 20px;
+  font-weight: 900;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.buttons label:hover {
+  background: #ff6b1a;
+  color: #111;
+}
+
+#hinata:checked ~ .hinata-card,
+#kageyama:checked ~ .kageyama-card,
+#tsukishima:checked ~ .tsukishima-card,
+#yamaguchi:checked ~ .yamaguchi-card {
+  display: block;
+  animation: pop 0.3s ease;
+}
+
+#hinata:checked ~ .buttons label[for="hinata"],
+#kageyama:checked ~ .buttons label[for="kageyama"],
+#tsukishima:checked ~ .buttons label[for="tsukishima"],
+#yamaguchi:checked ~ .buttons label[for="yamaguchi"] {
+  background: #ff6b1a;
+  color: #111;
+  border-color: #ff6b1a;
+}
+
+
